@@ -8,3 +8,6 @@ demo2:
 
 demo3:
 	gcc 3-demo-inf.c init_instance.c $(flags1)
+
+demo4:
+	gcc 4-demo-line.c init_instance.c $(flags1)
