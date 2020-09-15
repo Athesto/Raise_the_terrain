@@ -10,4 +10,4 @@ demo3:
 	gcc test/3-demo-inf.c init_instance.c $(flags1)
 
 demo4:
-	gcc test/4-demo-line.c init_instance.c $(flags1)
+	gcc test/4-demo-line.c init_instance.c void_draw_stuff.c $(flags1)
