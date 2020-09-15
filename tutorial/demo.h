@@ -1,6 +1,6 @@
 #ifndef _DEMO_H_
 #define _DEMO_H_
-#include <SDL2/SDL.H>
+#include <SDL2/SDL.h>
 
 typedef struct SDL_Instance
 {
