@@ -10,5 +10,6 @@ typedef struct SDL_Instance
 
 int init_instance(SDL_Instance *);
 void draw_stuff(SDL_Instance instance);
+int poll_events();
 
 #endif /* _DEMO_H_ */
