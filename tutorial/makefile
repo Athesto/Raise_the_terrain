@@ -1,4 +1,7 @@
-flags1=-g `sdl2-config --libs` `sdl2-config --cflags`
+flags1=-g -Wall -Wextra -Werror -pedantic `sdl2-config --libs` `sdl2-config --cflags`
 
 demo1:
 	gcc 1-demo.c $(flags1)
+
+demo2:
+	gcc 2-demo-Instance.c init_instance.c $(flags1)
