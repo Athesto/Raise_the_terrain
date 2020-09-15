@@ -1,4 +1,4 @@
-#include "demo.h"
+#include "../demo.h"
 
 void draw_stuff(SDL_Instance instance);
 
