@@ -11,3 +11,6 @@ demo3:
 
 demo4:
 	gcc test/4-demo-line.c init_instance.c void_draw_stuff.c $(flags1)
+
+demo5:
+	gcc test/5-demo-poll.c init_instance.c void_draw_stuff.c poll_events.c $(flags1)
