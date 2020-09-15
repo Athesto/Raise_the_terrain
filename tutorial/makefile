@@ -5,3 +5,6 @@ demo1:
 
 demo2:
 	gcc 2-demo-Instance.c init_instance.c $(flags1)
+
+demo3:
+	gcc 3-demo-inf.c init_instance.c $(flags1)
