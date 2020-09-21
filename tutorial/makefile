@@ -20,3 +20,9 @@ flags1=-g -Wall -Wextra -Werror -pedantic `sdl2-config --libs` `sdl2-config --cf
 
 7:
 	gcc test/7-*.c init_instance.c void_draw_stuff.c poll_events.c $(flags1)
+
+8:
+	gcc test/8-*.c init_instance.c void_draw_stuff.c poll_events.c $(flags1)
+
+9:
+	gcc test/9-*.c init_instance.c void_draw_stuff.c poll_events.c $(flags1)
