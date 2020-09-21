@@ -53,16 +53,16 @@ void draw_altmatrix(SDL_Instance instance, int m_len)
 	point_t tmp[8][8];
 	int col, row;
 	int len = 10;
-	int offset = 100;
+	int offset = 200;
 	float inclination = 0.7;
-	float zmatrix[8][8] = {
+	int zmatrix[8][8] = {
 		{120, 60, 40, 60, 20, -20, -80, -120},
 		{40, 20, 30, 30, -10, -40, -90, -110},
-		{20, 30, 10, 06, -6, -20, -26, -90},
-		{00, -6, 10, 10, -6, -20, -20, -40},
+		{20, 30, 10, 6, -6, -20, -26, -90},
+		{0, -6, 10, 10, -6, -20, -20, -40},
 		{-20, -20, -18, -14, -40, -20, -20, -30},
 		{-10, -10, -10, -10, -8, -20, -20, -30},
-		{20, 10, 10, 10, 10, 04, 10, -10},
+		{20, 10, 10, 10, 10, 4, 10, -10},
 		{30, 24, 24, 22, 20, 18, 14, 16}
 	};
 	SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -80,12 +80,12 @@ void draw_altmatrix(SDL_Instance instance, int m_len)
 	{
 		for (col = 0; col < 8; col++)
 		{
-			tmp[row][col].x = (inclination * point[col][row].x - inclination * point[col][row].y) + offset;
-			tmp[row][col].y = ((1 - inclination) * point[col][row].x + (1 - inclination) * point[col][row].y - point[col][row].z) + offset;
+			tmp[row][col].x = inclination * (point[row][col].x - point[row][col].y) + offset;
+			tmp[row][col].y = ((1 - inclination) * (point[row][col].x +  point[row][col].y ) + offset);
 			tmp[row][col].z = 0;
-			/* tmp[row][col].x = point[row][col].x; */
-			/* tmp[row][col].y = point[row][col].y; */
-			/* tmp[row][col].z = point[row][col].z; */
+			/*tmp[row][col].x = point[row][col].x;*/
+			/*tmp[row][col].y = point[row][col].y;*/
+			/*tmp[row][col].z = point[row][col].z;*/
 		}
 	}
 
@@ -101,6 +101,7 @@ void draw_altmatrix(SDL_Instance instance, int m_len)
 	}
 
 	(void)m_len;
+
 }
 
 void draw_matrix(SDL_Instance instance, int m_len)
