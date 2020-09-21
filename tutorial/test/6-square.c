@@ -70,7 +70,7 @@ void draw_squarerow(SDL_Instance instance, int m_len)
 		cell.x +=cell.len;
 	}
 
-	SDL_RenderDrawLine(instance.renderer, o.x, o.y + o.len, pend.x, pend.y); /* x */
+	SDL_RenderDrawLine(instance.renderer, o.x, pend.y, pend.x, pend.y); /* x */
 	SDL_RenderDrawLine(instance.renderer, pend.x, o.y, pend.x, pend.y); /* y */
 
 
